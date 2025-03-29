@@ -36,10 +36,11 @@ const Page = () => {
   const handleAddItem = (newItem) => {
     setItems((prevItems) => [...prevItems, newItem]);
   };
-  
+
   const handleItemSelect = (item) => {
     let cleanName = item.name.split(",")[0].trim();
-    const emojiRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
+    const emojiRegex =
+      /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
     const ingredient = cleanName.replace(emojiRegex, "").trim();
     setSelectedItemName(ingredient);
   };

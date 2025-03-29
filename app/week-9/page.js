@@ -15,7 +15,7 @@ export default function LandingPage() {
       console.error("Error during login:", error);
     }
   };
-  
+
   const handleLogout = async () => {
     try {
       await firebaseSignOut();
@@ -26,7 +26,7 @@ export default function LandingPage() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "2rem" }}>
-      <h1 style ={{fontWeight: "bold", fontSize: "2.5rem"}}>Shopping List App</h1>
+      <h1 style={{ fontWeight: "bold", fontSize: "2.5rem" }}>Shopping List App</h1>
       {user ? (
         <>
           <p>
